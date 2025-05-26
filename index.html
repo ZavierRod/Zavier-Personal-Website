@@ -1,31 +1,91 @@
-<!-- index.html (skeleton) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zavier Rodrigues • Software Engineer</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+
+  <!-- Site-wide CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" type="image/png" href="assets/favicon.png" /> -->
 </head>
 <body>
-  <header>
-    <nav class="container">
-      <a href="/" class="logo">ZR</a>
+  <header class="site-header">
+    <nav class="container nav">
+      <a href="#" class="logo">ZR</a>
+
+      <!-- Simple anchor links; feel free to swap for a JS router later -->
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <!-- Button is only a hook—your JS will take over -->
       <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
     </nav>
   </header>
 
-  <main class="container">
-    <!-- About, Projects, etc. -->
+  <main>
+    <!-- ======= HERO / LANDING ======= -->
+    <section class="hero">
+      <div class="container">
+        <h1>Hello, I’m <span class="accent">Zavier Rodrigues</span></h1>
+        <p class="tagline">Recent UC Berkeley grad • Aspiring full-stack engineer</p>
+        <a href="#projects" class="btn">See my work</a>
+      </div>
+    </section>
+
+    <!-- ======= ABOUT ======= -->
+    <section id="about" class="container section">
+      <h2>About Me</h2>
+      <p>
+        I’m a Computer Science × Economics graduate who loves low-level
+        programming, machine learning, and building useful web apps.
+        When I’m not coding you can find me surfing or exploring new cafés.
+      </p>
+    </section>
+
+    <!-- ======= PROJECTS ======= -->
+    <section id="projects" class="container section">
+      <h2>Projects</h2>
+
+      <!-- Project grid -->
+      <div class="project-grid">
+        <!-- Repeat this card for each project -->
+        <article class="card">
+          <img src="assets/placeholder.webp" alt="Screenshot of Project One" />
+          <div class="card-content">
+            <h3>Project One</h3>
+            <p>Short description of what it does, tech stack, and impact.</p>
+            <a href="https://github.com/youruser/project-one" class="btn-sm" target="_blank" rel="noopener">GitHub ↗︎</a>
+          </div>
+        </article>
+        <!-- … add more cards -->
+      </div>
+    </section>
+
+    <!-- ======= CONTACT ======= -->
+    <section id="contact" class="container section">
+      <h2>Get in Touch</h2>
+      <p>
+        The quickest way to reach me is <a href="mailto:you@example.com">email</a>.
+        You can also find me on
+        <a href="https://github.com/youruser" target="_blank" rel="noopener">GitHub</a>
+        &middot;
+        <a href="https://www.linkedin.com/in/youruser" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+    </section>
   </main>
 
-  <footer class="container">
-    © <span id="year"></span> Zavier Rodrigues
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Zavier Rodrigues</small>
   </footer>
+
+  <!-- Your future JS bundle -->
+  <script src="script.js" defer></script>
 </body>
 </html>
+
